@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f5f7fa;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+h1{
+    margin-bottom:40px;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    padding:20px;
+    margin:15px 0;
+    border-radius:10px;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.register{
+    background:#28a745;
+}
+
+.complaint{
+    background:#dc3545;
+}
+
+.feedback{
+    background:#007bff;
+}
