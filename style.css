@@ -1,39 +1,23 @@
-body{
-    margin:0;
-    font-family:Arial;
-    background:#f5f7fa;
+/* Remove default spacing */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-    max-width:500px;
-    margin:auto;
-    padding:40px 20px;
-    text-align:center;
-}
+/* Full-screen background */
+.backgroundimage {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-h1{
-    margin-bottom:40px;
-}
+    width: 100vw;
+    height: 100vh;
 
-.btn{
-    display:block;
-    text-decoration:none;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-    color:white;
-    font-size:20px;
-    font-weight:bold;
-}
+    background-image: url("images/background.png");
+    background-size: cover;        /* makes image fill screen */
+    background-position: center;    /* keeps center focus */
+    background-repeat: no-repeat;
 
-.register{
-    background:#28a745;
-}
-
-.complaint{
-    background:#dc3545;
-}
-
-.feedback{
-    background:#007bff;
+    z-index: -1;
 }
