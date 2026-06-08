@@ -3,41 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Login Page</title>
+    <title>Welcome to the Login Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
+    
     <div class="login-container">
         <div class="brand-section">
             <div class="brand-content">
                 <div class="logo-box">
-                    <span class="logo-main">E<span class="logo-sub">SOFT</span></span>
-                    <div class="tagline">Shaping Lives, Creating Futures.</div>
+                    <span class="logo-main">L<span class="logo-sub">EADERSHIP</span></span>
+                    <div class="tagline">Together We Rise Higher.</div>
                 </div>
-                <h1>Welcome to ESOFT</h1>
-                <p class="subtitle">Learning Management System</p>
+                <h1>Welcome to Youth Camp</h1>
+                <p class="subtitle">National Youth Corps</p>
             </div>
         </div>
 
         <div class="form-section">
             <div class="form-content">
-                <div class="icon-container">
-                    <svg class="grad-cap-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
-                        <path d="M19 13.19v4.31c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2v-4.31l7 3.82 7-3.82z"/>
-                    </svg>
-                </div>
+                <h2>LOGIN TO STUDENT PORTAL</h2>
+                
+                <form action="index.html" method="POST" class="login-form">
+                    <div class="input-group">
+                        <label for="username">Username / Student ID</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
 
-                <h2>LOGIN TO YOUR ACCOUNT</h2>
+                    <button type="submit" class="btn-login">LOGIN</button>
+                </form>
                 
-                <button class="btn-login">LOGIN</button>
-                
-                <div class="help-text">Need Help <a href="tel:0117677855">011 767 7855</a></div>
-                <div class="footer-text">Solution by <span class="vendor">itechro</span></div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
