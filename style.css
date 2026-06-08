@@ -134,6 +134,7 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease;
     margin-bottom: 25px;
+    underline: none;
 }
 
 .btn-login:hover {
