@@ -52,7 +52,7 @@ body {
     padding: 10px 25px;
     border-radius: 2px;
     margin-bottom: 25px;
-    border-bottom: 4px solid #ed1c24; /* Red bottom bar */
+    border-bottom: 4px solid #fff; 
 }
 
 .logo-main {
