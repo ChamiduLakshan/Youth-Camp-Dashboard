@@ -1,51 +1,181 @@
-/* Ensure the body takes up the full viewport height and removes default spacing */
-html, body {
+/* ==========================================================================
+   1. Core Resets & Base Styles
+   ========================================================================== */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* This class handles the responsive background wizardry */
-.login-bg {
-    background-image: url('images/background.png');
-    background-position: center center; /* Keeps the focal point centered on all screens */
-    background-repeat: no-repeat;       /* Prevents the image from tiling */
-    background-size: cover;             /* Scales the image to fill the screen dynamically */
-    min-height: 100vh;                  /* Forces it to be at least the height of the device screen */
-    width: 100%;
-    padding: 0;
+body {
+    background-color: #eef2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* Mobile Adjustments (Optional) */
-@media (max-width: 576px) {
-    .login-bg {
-        /* If your image looks too cropped on narrow phones, you can switch to 'contain' 
-           or use a dedicated mobile background image here if needed:
-           background-image: url('images/background-mobile.png'); */
-        background-position: center center;
+/* ==========================================================================
+   2. Main Layout Container (Mobile First Setup)
+   ========================================================================== */
+.login-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 550px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+}
+
+/* ==========================================================================
+   3. Left Banner Styling
+   ========================================================================== */
+.brand-section {
+    background: linear-gradient(135deg, #4d394e 0%, #2b233a 100%);
+    color: #ffffff;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Recreating the ESOFT Logo box look via CSS */
+.logo-box {
+    background-color: #0b4ca3;
+    padding: 10px 25px;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    border-bottom: 4px solid #ed1c24; /* Red bottom bar */
+}
+
+.logo-main {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-top: 2px;
+    color: #fff;
+}
+
+.brand-section h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.brand-section .subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   4. Right Form Styling
+   ========================================================================== */
+.form-section {
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.form-content {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+/* Icon hidden by default on mobile screens */
+.icon-container {
+    display: none; 
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.grad-cap-icon {
+    width: 80px;
+    height: 80px;
+    color: #000000;
+}
+
+.form-section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #1253a4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 25px;
+}
+
+.btn-login:hover {
+    background-color: #0d3f7e;
+}
+
+.help-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.help-text a {
+    color: #1253a4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.footer-text .vendor {
+    color: #a82654;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. Responsive Breakpoint (Tablets & Desktops)
+   ========================================================================== */
+@media (min-width: 650px) {
+    .login-container {
+        flex-direction: row; /* Switch columns side-by-side */
+    }
+
+    .brand-section, .form-section {
+        flex: 1; /* Assign exact 50% split space each */
+        padding: 60px 40px;
+    }
+
+    .icon-container {
+        display: flex; /* Bring back the graduate cap icon */
     }
 }
-/* ==========================================================================
-   Existing Background Code (Kept for reference)
-   ========================================================================== */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: 'Arial Black', 'Impact', sans-serif; /* Vintage bold feel */
-}
-
-.login-bg {
-    background-image: url('background.png'); /* Adjusted path if in same folder */
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
-    padding: 0;
-    position: relative;
-}
-
-
