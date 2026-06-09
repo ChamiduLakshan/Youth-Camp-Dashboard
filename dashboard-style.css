@@ -246,3 +246,7 @@ body {
 .portal-card:hover .portal-svg-icon {
     transform: scale(1.06);
 }
+h3 {
+  color: #800000;
+}
+
