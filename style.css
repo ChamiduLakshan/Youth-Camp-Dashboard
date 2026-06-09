@@ -181,7 +181,7 @@ body {
 }
 /* Container stays hidden on mobile, flex on desktop */
 .icon-container {
-    display: none; 
+    display: flex; 
     justify-content: center;
     margin-bottom: 25px;
 }
