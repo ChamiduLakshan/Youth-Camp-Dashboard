@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Event Portal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITS e:Vision Portal</title>
+    <link rel="stylesheet" href="dashboard-style.css">
 </head>
-
 <body>
 
-<div class="container">
+    <div class="portal-wrapper">
+        <!-- 1. Top University Header -->
+        <header class="portal-header">
+            <div class="logo-container">
+                <!-- Replace with your actual university/camp logo path -->
+                <img src="images/londonmet-logo.png" alt="University Logo" class="uni-logo">
+            </div>
+        </header>
 
-    <h1>Student Event Portal</h1>
+        <!-- 2. Dark Blue Title Banner Section -->
+        <section class="portal-banner">
+            <div class="banner-content">
+                <h1>Log in to SITS e:Vision Portal</h1>
+            </div>
+        </section>
 
-    <a class="btn complaint"
-       href="YOUR_GOOGLE_FORM_LINK"
-       target="_blank">
-       ⚠️ Complaint / Help Desk
-    </a>
+        <!-- 3. Dynamic Menu Cards Area -->
+        <main class="portal-main">
+            <div class="cards-container">
+                
+                <!-- Student Card Button -->
+                <a href="student-login.html" class="portal-card student-card">
+                    <div class="card-icon">
+                        <!-- Custom CSS Dot Matrix Circle Icon representing the screenshot icon -->
+                        <div class="dot-circle-icon"></div>
+                    </div>
+                    <span class="card-text">Student and staff login</span>
+                </a>
 
-    <a class="btn feedback"
-       href="YOUR_FEEDBACK_FORM_LINK"
-       target="_blank">
-       📊 Give Feedback
-    </a>
+                <!-- Applicant Card Button -->
+                <a href="applicant-login.html" class="portal-card applicant-card">
+                    <div class="card-icon">
+                        <!-- Silhouette Avatar Icon -->
+                        <svg class="avatar-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <span class="card-text">Applicant and agent login</span>
+                </a>
 
-</div>
+            </div>
+
+            <!-- Bottom Utilities -->
+            <div class="portal-utilities">
+                <a href="#" class="utility-link">Password Management</a>
+                
+                <div class="help-box">
+                    <h3>Login help</h3>
+                </div>
+            </div>
+        </main>
+    </div>
 
 </body>
 </html>
