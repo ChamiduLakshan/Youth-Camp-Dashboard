@@ -103,7 +103,7 @@ body {
 
 /* Icon hidden by default on mobile screens */
 .icon-container {
-    display: none; 
+    display: flex; 
     justify-content: center;
     margin-bottom: 25px;
 }
