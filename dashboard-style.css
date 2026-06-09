@@ -249,4 +249,21 @@ body {
 h3 {
   color: #800000;
 }
+.btn-login {
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 25px;
+}
+
+.btn-login:hover {
+    background-color: #037c50;
+}
 
