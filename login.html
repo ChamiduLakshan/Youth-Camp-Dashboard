@@ -30,11 +30,22 @@
                 
                 <form action="index.html" method="POST" class="login-form">
 
-                    <button type="submit" class="btn-login">LOGIN</button>
+                    <button type="submit" formaction="index.html" class="btn-login">LOGIN</button>
                 </form>
                 
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Stops the page from refreshing automatically
+        
+        // You can add validation logic here (e.g., checking credentials)
+        
+        // Redirect to the next page
+        window.location.href = "dashboard.html"; 
+    });
+</script>
 </html>
