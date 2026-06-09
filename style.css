@@ -179,3 +179,23 @@ body {
         display: flex; /* Bring back the graduate cap icon */
     }
 }
+/* Container stays hidden on mobile, flex on desktop */
+.icon-container {
+    display: none; 
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* New image styling to perfectly match the original icon size */
+.grad-cap-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Ensures the image doesn't stretch or distort */
+}
+
+/* Keeps the responsive logic from your previous setup */
+@media (min-width: 650px) {
+    .icon-container {
+        display: flex; 
+    }
+}
