@@ -33,7 +33,7 @@ body {
 .uni-logo {
     height: auto;
     width: 100%;
-    max-width: 80px; /* Restricts scaling to mimic screenshot layout */
+    max-width: 65px; /* Restricts scaling to mimic screenshot layout */
     display: block;
 }
 
