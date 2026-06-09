@@ -1,0 +1,225 @@
+/* ==========================================================================
+   1. Base Setup & Reset Definitions
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333333;
+    min-height: 100vh;
+}
+
+.portal-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   2. Header & Top Logo Styling
+   ========================================================================== */
+.portal-header {
+    padding: 20px 15px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.uni-logo {
+    height: auto;
+    width: 100%;
+    max-width: 220px; /* Restricts scaling to mimic screenshot layout */
+    display: block;
+}
+
+/* ==========================================================================
+   3. Main Blue Banner (Fluid Background with subtle styling overlay)
+   ========================================================================== */
+.portal-banner {
+    background: linear-gradient(145deg, #0f2c59 0%, #1a427a 100%);
+    color: #ffffff;
+    padding: 35px 20px;
+    position: relative;
+    border-bottom: 4px solid #d4d4d4;
+}
+
+/* Optional soft diagnostic stripes highlighting standard e:Vision layouts */
+.portal-banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(30deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+                linear-gradient(30deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.banner-content h1 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    line-height: 1.3;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   4. Menu Container Layout (Mobile Standard Default Stacked)
+   ========================================================================== */
+.portal-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Base Card Button Structural Blocks */
+.portal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ffffff;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.portal-card:hover {
+    filter: brightness(0.92);
+    transform: translateY(-1px);
+}
+
+/* Split Accent Color Classes matching the options */
+.student-card {
+    background-color: #003c71; /* Deep navy tone */
+}
+
+.applicant-card {
+    background-color: #e88200; /* Rich orange accent */
+}
+
+/* Vector/Graphic Layout Settings inside cards */
+.card-icon {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-icon {
+    width: 65px;
+    height: 65px;
+    color: #ffffff;
+}
+
+/* Dotted target graphic representation using pure CSS */
+.dot-circle-icon {
+    width: 60px;
+    height: 60px;
+    border: 6px dotted rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    position: relative;
+}
+.dot-circle-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px dotted rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-text {
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. Lower Utilities Components
+   ========================================================================== */
+.portal-utilities {
+    margin-top: 25px;
+}
+
+.utility-link {
+    display: block;
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.utility-link:hover {
+    text-decoration: underline;
+}
+
+.help-box {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   6. Responsive Adaptations (Media Queries)
+   ========================================================================== */
+
+/* Tablet Optimization Breakpoint */
+@media (min-width: 600px) {
+    .portal-banner {
+        padding: 50px 30px;
+    }
+    .banner-content h1 {
+        font-size: 2.2rem;
+    }
+    .portal-main {
+        padding: 30px;
+    }
+}
+
+/* Desktop Target Layout Breakpoint (Transforms stacked options to side-by-side) */
+@media (min-width: 992px) {
+    .portal-wrapper {
+        box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    
+    .portal-header {
+        padding: 25px 40px;
+    }
+
+    .portal-banner {
+        padding: 60px 40px;
+    }
+
+    /* Shift from column structure to two column grid row layout */
+    .cards-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .portal-card {
+        flex: 1; /* Grants equal split side-by-side footprint width */
+        min-height: 200px;
+        padding: 40px 20px;
+    }
+    
+    .portal-utilities {
+        max-width: 50%; /* Keeps utility blocks matching grid proportions on wider screens */
+    }
+}
