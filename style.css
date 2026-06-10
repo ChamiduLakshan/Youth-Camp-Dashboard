@@ -46,9 +46,9 @@ body {
     text-align: center;
 }
 
-/* Recreating the ESOFT Logo box look via CSS */
+/* Recreating the  Logo box look via CSS */
 .logo-box {
-    background-color: #04AA6D;
+    background-color: #660000;
     padding: 10px 25px;
     border-radius: 2px;
     margin-bottom: 25px;
@@ -124,7 +124,7 @@ body {
 
 .btn-login {
     width: 100%;
-    background-color: #04AA6D;
+    background-color: #800000;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -137,7 +137,7 @@ body {
 }
 
 .btn-login:hover {
-    background-color: #037c50;
+    background-color: #660000;
 }
 
 .help-text {
