@@ -109,8 +109,8 @@ body {
 }
 
 .grad-cap-icon {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     color: #000000;
 }
 
@@ -188,8 +188,8 @@ body {
 
 /* New image styling to perfectly match the original icon size */
 .grad-cap-image {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     object-fit: contain; /* Ensures the image doesn't stretch or distort */
 }
 
