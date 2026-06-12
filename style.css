@@ -38,7 +38,7 @@ body {
    ========================================================================== */
 .brand-section {
     background: linear-gradient(135deg, #4d394e 0%, #2b233a 100%);
-    background-image: url('images/background.png');
+    background-image: url('images/loginbg.jpg');
     color: #ffffff;
     padding: 40px 30px;
     display: flex;
