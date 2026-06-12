@@ -12,6 +12,7 @@ body {
     background-color: #f4f4f4;
     color: #333333;
     min-height: 100vh;
+    background-image: url('images/loginbg.jpg');
 }
 
 .portal-wrapper {
