@@ -221,5 +221,29 @@ body {
     
     .portal-utilities {
         max-width: 50%; /* Keeps utility blocks matching grid proportions on wider screens */
+
+   /* Container framework styling for the card graphics */
+.card-icon {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+/* Dictates fluid coloring and sizing rules for our custom vector SVGs */
+.portal-svg-icon {
+    width: 100%;
+    height: 100%;
+    color: #ffffff; /* Forces icons to adapt natively to white text color inside cards */
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+/* Subtle hover interaction animation for an enhanced UI feel */
+.portal-card:hover .portal-svg-icon {
+    transform: scale(1.06);
+}
     }
 }
