@@ -43,7 +43,7 @@ body, html {
     width: 58.33333333%; /* Equivalent to Bootstrap col-md-7 */
     height: 100%;
     /* Replicates the exact SDG grid backdrop style seen in the reference pictures */
-    background: url('https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+    background: url('images/loginbg.jpg') no-repeat center center;
     background-size: cover;
 }
 
