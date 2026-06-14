@@ -1,170 +1,199 @@
-/* --- Reset & Global Styles --- */
+/* --- Global Microsoft B2C & Bootstrap Overrides --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    min-height: 100vh;
+body, html {
+    height: 100%;
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- Split Layout System (Desktop vs Mobile Viewports) --- */
+.container-fluid {
     display: flex;
-    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left panel where login elements live */
+.login-side {
+    width: 41.66666667%; /* Equivalent to Bootstrap col-md-5 */
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
     align-items: center;
-    background-color: #f4f7f6;
-    /* Using a high-quality Sustainable Development Goals (SDG) mosaic concept background */
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                url('https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-}
-
-/* --- Layout Container --- */
-.login-container {
-    width: 100%;
-    max-width: 480px; /* Standard login panel constraint */
-    display: flex;
     justify-content: center;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
 }
 
-/* --- White Login Card Panel --- */
-.login-card {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+/* Right background side holding the SDG Mosaic Graphic */
+.background-side {
+    width: 58.33333333%; /* Equivalent to Bootstrap col-md-7 */
+    height: 100%;
+    /* Replicates the exact SDG grid backdrop style seen in the reference pictures */
+    background: url('https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+    background-size: cover;
+}
+
+/* --- Wrapper and Panel Box Setup --- */
+#wrapper {
     width: 100%;
+    max-width: 380px; /* Precise width constraint of real B2C layout cards */
+    margin: 0 auto;
+}
+
+.panel-default {
+    border: none;
+    background: transparent;
+}
+
+/* --- Company Logo Wrapper Layout --- */
+.company_logo_wrapper {
+    text-align: center;
+    display: table; /* Confirmed by your style inspector in Screenshot (52).jpg */
+    width: 100%;
+    height: 150px; /* From common.css:865 in inspection panel */
+    margin-bottom: 10px;
+}
+
+.undp-logo-container {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
 }
 
-/* --- Company Logo Header Styling --- */
-.company-logo-wrapper {
+/* Custom CSS Art to mimic the real UNDP emblem exactly without broken image tags */
+.undp-blue-box {
+    background-color: #006eb6;
+    color: #ffffff;
+    width: 52px;
+    height: 70px;
+    margin: 0 auto 6px auto;
+    padding-top: 8px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.crown-emblem {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px auto;
+    border: 2px dashed rgba(255, 255, 255, 0.8); /* Simulated crest */
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 11px;
+    letter-spacing: 0.5px;
+}
+
+.access-brand {
+    font-size: 11px;
+    font-weight: bold;
+    color: #006eb6;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+}
+
+/* --- Text Typography Settings --- */
+.intro-text {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.45;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: normal;
+}
+
+/* --- Identity Provider (IDP) Buttons --- */
+.idp-buttons-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 150px; /* Matched to common.css:865 in your screenshots */
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.undp-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #006eb6; /* Signature UNDP Blue */
-    color: white;
-    padding: 10px 12px;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 2px;
-    margin-bottom: 8px;
-}
-
-.undp-logo .emblem {
-    font-size: 20px;
-    margin-bottom: 2px;
-}
-
-.undp-logo .brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-    font-size: 11px;
-    letter-spacing: 1px;
-}
-
-.access-title {
-    font-size: 12px;
-    font-weight: 600;
-    color: #006eb6;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* --- Typography --- */
-.description {
-    font-size: 13px;
-    color: #555555;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    padding: 0 10px;
-}
-
-/* --- Buttons Layout --- */
-.action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-/* --- Button Design Elements --- */
-.btn {
+.btn-idp {
     width: 100%;
-    padding: 14px 16px;
-    font-size: 14px;
-    font-weight: 500;
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
     color: #333333;
+    border: 1px solid #cccccc;
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 3px; /* Sharp, subtle corners exactly like production */
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    transition: background-color 0.15s ease;
 }
 
-.btn:hover {
-    background-color: #f8fafc;
-    border-color: #006eb6;
-    color: #006eb6;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.btn-idp:hover {
+    background-color: #f5f5f5;
+    border-color: #adadad;
 }
 
-/* --- Specific Partner Split Grid --- */
-.partner-section {
-    margin-top: 20px;
-}
-
-.partner-label {
-    font-size: 12px;
-    color: #666666;
+/* --- Partner Login Breakout Region --- */
+.partner-login-label {
+    font-size: 11px;
+    color: #333333;
+    text-align: center;
     margin-bottom: 12px;
 }
 
-.partner-grid {
+.partner-grid-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 12px;
 }
 
-/* --- Mobile / Responsive Framework Breakpoints --- */
+/* --- Responsive Layout Breakpoints --- */
 
-/* For smaller screens like Tablet (768px) and Mobile (below 425px) */
-@media (max-width: 500px) {
-    body {
-        background-size: auto 100%;
-        padding: 10px;
+/* Tablet Optimization Layout (768px view ports) */
+@media (max-width: 992px) {
+    .login-side {
+        width: 100%; /* Login card takes over complete screen width */
+        background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), 
+                    url('https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+        background-size: cover;
+    }
+    .background-side {
+        display: none; /* Disappears exactly as seen in Screenshot (54).jpg */
+    }
+}
+
+/* Mobile Configurations (Matches 425px down to 320px breakpoints) */
+@media (max-width: 480px) {
+    .login-side {
+        padding: 20px;
+    }
+    
+    #wrapper {
+        max-width: 100%;
     }
 
-    .login-card {
-        padding: 30px 20px;
-    }
-
-    .description {
+    .btn-idp {
         font-size: 12px;
+        padding: 11px 10px;
     }
-
-    .btn {
-        padding: 12px 14px;
-        font-size: 13px;
-    }
-}
-
-/* Handles ultra-small device screens (320px) seen in your final screenshot */
-@media (max-width: 360px) {
-    .partner-grid {
-        grid-template-columns: 1fr; /* Stacks partner buttons if area is too narrow */
-        gap: 10px;
+    
+    /* Matches Screenshot (56).jpg / Screenshot (57).jpg where bottom partner buttons split vertically */
+    .partner-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 }
