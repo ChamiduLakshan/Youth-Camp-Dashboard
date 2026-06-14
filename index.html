@@ -3,40 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="login-container">
-        <div class="login-card">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Side: Login Panel Side -->
+            <div class="col-md-5 h-100 login-side">
+                <div id="wrapper">
+                    <div class="panel panel-default center-block">
+                        
+                        <!-- Company Logo Wrapper (Matched to common.css) -->
+                        <div class="company_logo_wrapper">
+                            <div class="undp-logo-container">
+                                <!-- Exact replication of the UNDP emblem box layout -->
+                                <div class="undp-blue-box">
+                                    <div class="crown-emblem"></div>
+                                    <div class="logo-text">U N<br>D P</div>
+                                </div>
+                                <div class="access-brand">ACCESS</div>
+                            </div>
+                        </div>
+
+                        <!-- Main Content Block -->
+                        <div class="panel-body">
+                            <p class="intro-text">
+                                The single sign-on page provides users across UNDP and our UN partner agencies with simple access to the relevant corporate platform using your existing agency credentials.
+                            </p>
+
+                            <!-- Identity Provider Buttons -->
+                            <div class="idp-buttons-container">
+                                <button class="btn-idp">UNDP Users and Guests</button>
+                                <button class="btn-idp">UNDP Partners using Microsoft 365</button>
+                                <button class="btn-idp">UNall Invited Guests</button>
+                            </div>
+
+                            <!-- Specific Partner Breakout Grid -->
+                            <div class="partner-login-label">Specific partner login:</div>
+                            <div class="partner-grid-layout">
+                                <button class="btn-idp">UNFPA</button>
+                                <button class="btn-idp">UNOPS</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             
-            <div class="company-logo-wrapper">
-                <div class="undp-logo">
-                    <div class="emblem">🇺🇳</div>
-                    <div class="brand-text"><span>U N</span><span>D P</span></div>
-                </div>
-                <div class="access-title">ACCESS</div>
-            </div>
-
-            <p class="description">
-                The single sign-on page provides users across UNDP and our UN partner agencies with simple access to the relevant corporate platform using your existing agency credentials.
-            </p>
-
-            <div class="action-buttons">
-                <button class="btn btn-primary">UNDP Users and Guests</button>
-                <button class="btn btn-primary">UNDP Partners using Microsoft 365</button>
-                <button class="btn btn-primary">UNall Invited Guests</button>
-            </div>
-
-            <div class="partner-section">
-                <div class="partner-label">Specific partner login:</div>
-                <div class="partner-grid">
-                    <button class="btn btn-secondary">UNFPA</button>
-                    <button class="btn btn-secondary">UNOPS</button>
-                </div>
-            </div>
-
+            <!-- Right Side / Dynamic Background Area -->
+            <div class="col-md-7 background-side"></div>
         </div>
     </div>
 
