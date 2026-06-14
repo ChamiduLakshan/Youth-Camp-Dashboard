@@ -223,6 +223,7 @@ body {
         max-width: 50%; /* Keeps utility blocks matching grid proportions on wider screens */
 
    /* Container framework styling for the card graphics */
+    }
 .card-icon {
     margin-bottom: 18px;
     display: flex;
