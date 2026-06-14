@@ -3,59 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Feedback Page</title>
     <link rel="stylesheet" href="dashboard-style.css">
 </head>
 <body>
 
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Left Side: Login Panel Side -->
-            <div class="col-md-5 h-100 login-side">
-                <div id="wrapper">
-                    <div class="panel panel-default center-block">
-                        
-                        <!-- Company Logo Wrapper (Matched to common.css) -->
-                        <div class="company_logo_wrapper">
-                            <div class="undp-logo-container">
-                                <!-- Exact replication of the UNDP emblem box layout -->
-                                <div class="undp-blue-box">
-                                    <div class="crown-emblem"></div>
-                                    <div class="logo-text">U N<br>D P</div>
-                                </div>
-                                <div class="access-brand">ACCESS</div>
-                            </div>
-                        </div>
-
-                        <!-- Main Content Block -->
-                        <div class="panel-body">
-                            <p class="intro-text">
-                                The single sign-on page provides users across UNDP and our UN partner agencies with simple access to the relevant corporate platform using your existing agency credentials.
-                            </p>
-
-                            <!-- Identity Provider Buttons -->
-                            <div class="idp-buttons-container">
-                                <button class="btn-idp">UNDP Users and Guests</button>
-                                <button class="btn-idp">UNDP Partners using Microsoft 365</button>
-                                <button class="btn-idp">UNall Invited Guests</button>
-                            </div>
-
-                            <!-- Specific Partner Breakout Grid -->
-                            <div class="partner-login-label">Specific partner login:</div>
-                            <div class="partner-grid-layout">
-                                <button class="btn-idp">UNFPA</button>
-                                <button class="btn-idp">UNOPS</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+    <div class="portal-wrapper">
+        
+        <header class="portal-header">
+            <div class="logo-container">
+                <img src="images/YouthCampLogo.jpeg" alt="University Logo" class="uni-logo">
+                <h3>YOUTH CAMP 2026</h3>
             </div>
+        </header>
+
+        <section class="portal-banner">
+            <div class="banner-content">
+                <h1>Feedback</h1>
+            </div>
+        </section>
+
+        
+        <main class="portal-main">
+            <div class="cards-container">
+                
             
-            <!-- Right Side / Dynamic Background Area -->
-            <div class="col-md-7 background-side"></div>
-        </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdu0DNlVVDyEUgs2ZHXaN8CUIfbNaNKTYlIMaygPUoXii_OSw/viewform?usp=sharing&ouid=112028929869128339564" class="portal-card applicant-card">
+                    <div class="card-icon">
+                        <svg class="portal-svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" fill="currentColor" opacity="0.15"/>
+                            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16ZM12 13.08L14.47 14.57L13.84 11.77L16.01 9.88L13.14 9.63L12 7L10.86 9.63L7.99 9.88L10.16 11.77L9.53 14.57L12 13.08Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="card-text">Student Feedback</span>
+                </a>
+
+    
+                <form id="loginForm" class="login-form">
+                    <button type="submit" class="btn-login">Go Back</button>
+                </form>
+        </main>
     </div>
 
 </body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        window.location.href = "login.html"; 
+    });
+</script>
 </html>
