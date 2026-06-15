@@ -34,6 +34,7 @@ h5 {
     cursor: pointer;
     transition: background-color 0.2s ease;
     margin-bottom: 25px;
+    align-items: center;
 }
 
 .btn-login:hover {
