@@ -63,13 +63,19 @@ h4 {
    3. Main Blue Banner (Fluid Background with subtle styling overlay)
    ========================================================================== */
 .portal-banner {
-    background: linear-gradient(145deg, #0f2c59 0%, #1a427a 100%),
-       url('images/loginbg1.jpg');
-            
-    color: #ffffff;
-    padding: 35px 20px;
+    width: 100%;
+    min-height: 300px;
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('images/loginbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     position: relative;
-    border-bottom: 4px solid #d4d4d4;
 }
 
 /* Optional soft diagnostic stripes highlighting standard e:Vision layouts */
