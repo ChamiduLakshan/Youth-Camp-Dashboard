@@ -78,16 +78,7 @@ h4 {
     position: relative;
 }
 
-/* Optional soft diagnostic stripes highlighting standard e:Vision layouts */
-.portal-banner::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(30deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-                linear-gradient(30deg, transparent 75%, rgba(255,255,255,0.05) 75%);
-    background-size: 40px 40px;
-    pointer-events: none;
-}
+/* Optional soft diagnostic stripes highlighting standard e:Vision layouts 
 
 .banner-content h1 {
     font-size: 1.65rem;
