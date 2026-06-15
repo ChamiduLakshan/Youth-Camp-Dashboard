@@ -63,7 +63,9 @@ h4 {
    3. Main Blue Banner (Fluid Background with subtle styling overlay)
    ========================================================================== */
 .portal-banner {
-    background: linear-gradient(145deg, #0f2c59 0%, #1a427a 100%);
+    background: linear-gradient(145deg, #0f2c59 0%, #1a427a 100%),
+       url('images/loginbg1.jpg');
+            
     color: #ffffff;
     padding: 35px 20px;
     position: relative;
