@@ -15,8 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-image: linear-gradient(135deg, rgba(77, 57, 148, 0.4), rgba(43, 35, 58, 0.4)), 
-                      url('images/Newbg.jpeg');
+    background-image: url('images/Newbg.jpeg');
     background-size: cover;
     background-position: center;
     
