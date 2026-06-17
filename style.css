@@ -10,7 +10,6 @@
 
 body {
     background-color: #eef2f5;
-    background-image: url('images/Newbg.jpeg');
     min-height: 100vh;
     display: flex;
     justify-content: center;
