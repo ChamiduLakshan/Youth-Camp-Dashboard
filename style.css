@@ -41,7 +41,7 @@ body {
     background: linear-gradient(135deg, #4d394e 0%, #2b233a 100%);
     
     /* Link your new image here */
-    background-image: url('images/Newbg.jpg'); 
+    background-image: url('images/Newbg.jpeg'); 
     
     /* CRITICAL PROPERTIES FOR ALL DEVICES */
     background-repeat: no-repeat;
