@@ -10,12 +10,13 @@
 
 body {
     background-color: #eef2f5;
-    background-image: url('images/loginbg1.jpg');
+    background-image: url('images/Newbg.jpeg');
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    filter: blur(6px);
 }
 
 /* ==========================================================================
@@ -38,7 +39,7 @@ body {
    ========================================================================== */
 .brand-section {
     background: linear-gradient(135deg, #4d394e 0%, #2b233a 100%);
-    background-image: url('images/loginbg.jpg');
+    background-image: url('images/Newbg.jpeg');
     color: #ffffff;
     padding: 40px 30px;
     display: flex;
