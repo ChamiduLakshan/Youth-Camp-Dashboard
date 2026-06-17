@@ -38,8 +38,7 @@ body {
    ========================================================================== */
 .brand-section {
     /* Merged your gradient and image into a single shorthand property */
-    background: linear-gradient(135deg, rgba(77, 57, 148, 0.8) 0%, rgba(43, 35, 58, 0.8) 100%), 
-                url('images/Newbg.jpeg');
+    background: url('images/Newbg.jpeg');
     
     /* CRITICAL FIX: Forces image to fill the container entirely, eliminating white spaces */
     background-size: cover;
