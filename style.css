@@ -37,8 +37,18 @@ body {
    3. Left Banner Styling
    ========================================================================== */
 .brand-section {
+    /* High-quality gradient fallback for any empty space */
     background: linear-gradient(135deg, #4d394e 0%, #2b233a 100%);
-    background-image: url('images/Newbg.jpeg');
+    
+    /* Link your new image here */
+    background-image: url('images/Newbg.jpg'); 
+    
+    /* CRITICAL PROPERTIES FOR ALL DEVICES */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* Ensures the FULL picture is always visible */
+    
+    /* Layout properties from your snippet */
     color: #ffffff;
     padding: 40px 30px;
     display: flex;
@@ -46,6 +56,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
+    /* Give the container a responsive height bounds */
+    min-height: 100vh; 
+    width: 100%;
 }
 
 /* Recreating the  Logo box look via CSS */
