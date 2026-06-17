@@ -44,7 +44,7 @@ body {
    ========================================================================== */
 .brand-section {
     /* Merged your gradient and image into a single shorthand property */
-    background: url('images/Newbg.jpeg');
+    background: url('images/Dasboard.jpeg');
     
     /* CRITICAL FIX: Forces image to fill the container entirely, eliminating white spaces */
     background-size: cover;
