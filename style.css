@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. Core Resets & Base Styles
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,14 +17,12 @@ body {
     background-size: cover;
     background-position: center;
     
-    /* This blurs the background image underneath, but keeps the text sharp */
+   
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
 
-/* ==========================================================================
-   2. Main Layout Container (Mobile First Setup)
-   ========================================================================== */
+
 .login-container {
     background-color: #ffffff;
     width: 100%;
@@ -36,16 +32,14 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Stack vertically on small screens */
+    flex-direction: column; 
 }
 
-/* ==========================================================================
-   3. Left Banner Styling
-   ========================================================================== */
+
 .brand-section {
     background: url('images/Dasboard.jpeg');
     
-    /* CRITICAL FIX: Forces image to fill the container entirely, eliminating white spaces */
+    
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -57,20 +51,20 @@ body {
     align-items: center;
     text-align: center;
     
-    /* Responsive padding: use viewport width (vw) or % so it scales smoothly */
+    
     padding: 5vw 20px; 
     min-height: 100vh;
     width: 100%;
     box-sizing: border-box;
 
 }
-/* Recreating the  Logo box look via CSS */
+
 .logo-box {
     background-color: #660000;
     padding: 10px 25px;
     border-radius: 2px;
     margin-bottom: 25px;
-    border-bottom: 4px solid #ffffff; /* Red bottom bar */
+    border-bottom: 4px solid #ffffff; 
 }
 
 .logo-main {
@@ -102,9 +96,7 @@ body {
     opacity: 0.8;
 }
 
-/* ==========================================================================
-   4. Right Form Styling
-   ========================================================================== */
+
 .form-section {
     padding: 40px 30px;
     display: flex;
@@ -119,7 +111,7 @@ body {
     text-align: center;
 }
 
-/* Icon hidden by default on mobile screens */
+
 .icon-container {
     display: flex; 
     justify-content: center;
@@ -180,38 +172,36 @@ body {
     font-weight: bold;
 }
 
-/* ==========================================================================
-   5. Responsive Breakpoint (Tablets & Desktops)
-   ========================================================================== */
+
 @media (min-width: 650px) {
     .login-container {
-        flex-direction: row; /* Switch columns side-by-side */
+        flex-direction: row; 
     }
 
     .brand-section, .form-section {
-        flex: 1; /* Assign exact 50% split space each */
+        flex: 1; 
         padding: 60px 40px;
     }
 
     .icon-container {
-        display: flex; /* Bring back the graduate cap icon */
+        display: flex; 
     }
 }
-/* Container stays hidden on mobile, flex on desktop */
+
 .icon-container {
     display: flex; 
     justify-content: center;
     margin-bottom: 25px;
 }
 
-/* New image styling to perfectly match the original icon size */
+
 .grad-cap-image {
     width: 100px;
     height: 100px;
-    object-fit: contain; /* Ensures the image doesn't stretch or distort */
+    object-fit: contain; 
 }
 
-/* Keeps the responsive logic from your previous setup */
+
 @media (min-width: 650px) {
     .icon-container {
         display: flex; 
