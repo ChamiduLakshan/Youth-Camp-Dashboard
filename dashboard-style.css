@@ -59,51 +59,40 @@ h4 {
 
 .portal-banner {
     width: 100%;
-    /* Replaces min-height. Adjust percentages (e.g., 16/9 or 4/3) to match your exact image aspect ratio */
-    aspect-ratio: 4 / 3; 
-    
+    min-height: 300px; /* Mobile view */
     background:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
         url('images/lgbg.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* Keeps faces in frame */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     position: relative;
+    transition: min-height 0.3s ease;
 }
 
-/* Optional: cap the height on ultra-wide screens so it doesn't get massive */
-@media (min-width: 1200px) {
+/* Tablet View */
+@media (min-width: 768px) {
     .portal-banner {
-        aspect-ratio: auto;
-        height: 600px;
+        min-height: 450px;
     }
-}.portal-banner {
-    width: 100%;
-    /* Replaces min-height. Adjust percentages (e.g., 16/9 or 4/3) to match your exact image aspect ratio */
-    aspect-ratio: 4 / 3; 
-    
-    background:
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('images/lgbg.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: relative;
 }
 
-/* Optional: cap the height on ultra-wide screens so it doesn't get massive */
-@media (min-width: 1200px) {
+/* Laptop View */
+@media (min-width: 1024px) {
     .portal-banner {
-        aspect-ratio: auto;
-        height: 600px;
+        min-height: 550px;
+    }
+}
+
+/* Ultra-Wide & 4K Displays (2560px and up) */
+@media (min-width: 2560px) {
+    .portal-banner {
+        min-height: 700px; /* Scales the height up proportionally for massive screens */
+        background-position: center 15%; /* Refines vertical alignment for extreme widths */
     }
 }
 
