@@ -43,26 +43,26 @@ body {
    3. Left Banner Styling
    ========================================================================== */
 .brand-section {
-    /* Merged your gradient and image into a single shorthand property */
-     background: linear-gradient(135deg, #4d394e 0%, #2b233a 100%);
-    background-image: url('images/bg.jpeg');
+    background: url('images/Dasboard.jpeg');
+    
+    /* CRITICAL FIX: Forces image to fill the container entirely, eliminating white spaces */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
     color: #ffffff;
-    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
- /* Ensures padding doesn't break the 100vh height */
-}
+    
+    /* Responsive padding: use viewport width (vw) or % so it scales smoothly */
+    padding: 5vw 20px; 
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
 
-/* Media Query for larger screens (Tablet/Desktop) */
-@media (min-width: 650px) {
-    .brand-section {
-        flex: 1;
-        padding: 60px 40px;
-    }
-}
 
 /* Recreating the  Logo box look via CSS */
 .logo-box {
