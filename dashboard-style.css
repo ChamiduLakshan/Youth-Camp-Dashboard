@@ -65,18 +65,33 @@ h4 {
    ========================================================================== */
 .portal-banner {
     width: 100%;
-    min-height: 300px;
+    min-height: 300px; /* Mobile height */
     background:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
         url('images/lgbg.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* Shifts the image down slightly to keep faces visible */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     position: relative;
+    transition: min-height 0.3s ease;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .portal-banner {
+        min-height: 450px; /* Increases container height to show more of the image */
+    }
+}
+
+/* Laptop/Desktop View */
+@media (min-width: 1024px) {
+    .portal-banner {
+        min-height: 550px; /* Keeps the portrait/scenery balanced on wide screens */
+    }
 }
 
 /* Optional soft diagnostic stripes highlighting standard e:Vision layouts 
